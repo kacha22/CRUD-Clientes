@@ -78,7 +78,6 @@ class Game:
         pygame.display.set_caption("Kill the Covid")
 
         pygame.mixer.init()
-
         self.surface = pygame.display.set_mode((1280,720))
         self.snake = Snake(self.surface)
         self.snake.draw()
@@ -118,6 +117,7 @@ class Game:
 
     def show_game_over(self):
         self.surface.fill(background_color)
+
         font = pygame.font.SysFont('arial', 30)
         line1 = font.render(f"Game is over! You score is {self.snake.length}", True, (0,0,0))
         self.surface.blit(line1, (500,300))
